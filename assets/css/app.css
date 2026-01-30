@@ -447,6 +447,7 @@ footer.visible {
     border-radius: 0.5rem;
     backdrop-filter: blur(0.1rem);
     -webkit-backdrop-filter: blur(0.1rem);
+    min-height: 80vh;
 }
 
 .post-header {
@@ -602,12 +603,29 @@ footer.visible {
     max-width: 900px;
     margin: 2rem auto;
     padding: 2rem;
+    min-height: 80vh;
+}
+
+/* Hide sidebar on blog pages */
+body:has(.blog-listing) aside,
+body:has(.blog-post) aside {
+    display: none;
+}
+
+/* Adjust main width when sidebar is hidden */
+body:has(.blog-listing) main,
+body:has(.blog-post) main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .blog-listing h1 {
     font-size: 3rem;
     margin-bottom: 2rem;
     text-align: center;
+    color: rgba(var(--text), 1);
 }
 
 .posts-list {

@@ -84,6 +84,10 @@ createTypewriter('hello_world', {
 // Interactive scroll effect for intro sections
 (function() {
   const intros = document.querySelectorAll('.intro');
+  
+  // Only run if we have intro sections (i.e., on home page)
+  if (intros.length === 0) return;
+  
   const body = document.body;
   let currentIndex = 0;
   let miniIntrosContainer;
