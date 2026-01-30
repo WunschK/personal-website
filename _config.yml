@@ -8,13 +8,13 @@ url: "https://wunschk.github.io" # Your site URL when deployed
 
 # Build settings
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title/
+permalink: /posts/:year/:month/:day/:title/
 
 # Collections
 collections:
   posts:
     output: true
-    permalink: /blog/:year/:month/:day/:title/
+    permalink: /posts/:year/:month/:day/:title/
 
 # Exclude from processing
 exclude:
