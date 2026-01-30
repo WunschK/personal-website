@@ -83,11 +83,18 @@ aside {
 	height: calc(100vh - 8.7rem);
     border: 1px solid rgba(var(--mini-intro-hover), 0.8);
     border-radius: 0.3rem;
+	overflow: visible;
+}
+
+aside ul {
+	position: relative;
+	z-index: 1000;
 }
 
 aside ul li {
 	margin: 1rem 0;
 	list-style-type: none;
+}
 }
 
 aside a.inactive {
@@ -115,7 +122,7 @@ aside li:has(a.inactive):hover::after {
 	border-radius: 0.3rem;
 	white-space: nowrap;
 	font-size: 0.9rem;
-	z-index: 1000;
+	z-index: 100000;
 }
 
 
