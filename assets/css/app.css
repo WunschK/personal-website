@@ -606,7 +606,7 @@ footer.visible {
     text-align: right;
 }
 
-.back-to-blog {
+.back-to-home {
     display: inline-block;
     padding: 0.75rem 1.5rem;
     background: rgba(var(--mini-intro-hover), 0.2);
@@ -615,7 +615,7 @@ footer.visible {
     transition: all 0.3s ease;
 }
 
-.back-to-blog:hover {
+.back-to-home:hover {
     background: rgba(var(--mini-intro-hover), 0.3);
     transform: translateX(-0.25rem);
 }
