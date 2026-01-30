@@ -90,6 +90,34 @@ aside ul li {
 	list-style-type: none;
 }
 
+aside a.inactive {
+	opacity: 0.5;
+	cursor: not-allowed;
+	pointer-events: none;
+	position: relative;
+}
+
+aside li:has(a.inactive) {
+	position: relative;
+	cursor: not-allowed;
+}
+
+aside li:has(a.inactive):hover::after {
+	content: "This link is disabled at the moment";
+	position: absolute;
+	left: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: 1rem;
+	padding: 0.5rem 0.75rem;
+	background: rgba(var(--header), 0.95);
+	border: 1px solid rgba(var(--mini-intro-hover), 0.8);
+	border-radius: 0.3rem;
+	white-space: nowrap;
+	font-size: 0.9rem;
+	z-index: 1000;
+}
+
 
 main {
 	position: relative;
