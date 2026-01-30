@@ -3,8 +3,8 @@ title: Kevin Wunsch | hello world
 description: Thoughts on digital humanities, programming, and technology
 author: Kevin Wunsch
 email: your-email@example.com
-baseurl: "" # Leave empty for root domain
-url: "" # Your site URL when deployed
+baseurl: "/personal-website" # Repository name for GitHub Pages
+url: "https://wunschk.github.io" # Your site URL when deployed
 
 # Build settings
 markdown: kramdown
