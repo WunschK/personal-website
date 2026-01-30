@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="blog-listing">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="category-intro">{{ page.description }}</p>
+    {% endif %}
+    
+    <div class="posts-list">
+        {% assign filtered_posts = site.posts | where_exp: "post", "post.tags contains page.category_tag" %}
+        {% if filtered_posts.size > 0 %}
+            {% for post in filtered_posts %}
+            <article class="post-preview">
+                <header>
+                    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                    <div class="post-meta">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">
+                            {{ post.date | date: "%B %d, %Y" }}
+                        </time>
+                    </div>
+                </header>
+                
+                {% if post.excerpt %}
+                <div class="excerpt">
+                    {{ post.excerpt | strip_html | truncatewords: 50 }}
+                </div>
+                {% endif %}
+                
+                <a href="{{ post.url | relative_url }}" class="read-more">Read more →</a>
+            </article>
+            {% endfor %}
+        {% else %}
+            <p class="no-posts">No posts yet in this category. Check back soon!</p>
+        {% endif %}
+    </div>
+</div>

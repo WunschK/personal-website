@@ -260,6 +260,17 @@ footer.visible {
     transition: all 0.3s ease;
     backdrop-filter: blur(0.1rem);
     -webkit-backdrop-filter: blur(0.1rem);
+    display: block;
+    text-decoration: none;
+}
+
+.topic:visited {
+    color: rgba(var(--text), 1);
+}
+
+.topic h3 {
+    margin: 0 0 0.5rem 0;
+    color: rgba(var(--link), 1);
 }
 
 .topic:hover {
@@ -268,6 +279,10 @@ footer.visible {
     background: rgba(var(--header), 0.3);
     backdrop-filter: blur(0.2rem);
     -webkit-backdrop-filter: blur(0.2rem);
+}
+
+.topic:hover h3 {
+    color: rgba(var(--hover), 1);
 }
 
 @keyframes blink {
