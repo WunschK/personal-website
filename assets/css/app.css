@@ -119,6 +119,11 @@ footer {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Hide global footer on blog post pages */
+body:has(.blog-post) footer {
+    display: none;
+}
+
 footer.visible {
     opacity: 1;
     transform: translateY(0);
